@@ -1,4 +1,3 @@
-connect = require 'connect'
 chai = require 'chai'
 
 chai.should()
