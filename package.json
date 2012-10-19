@@ -1,6 +1,6 @@
 {
   "name": "rampart",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Authorization module for Node.js.",
   "main": "./lib/rampart.js",
   "dependencies":{

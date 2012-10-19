@@ -17,8 +17,10 @@ class Ability extends Rampart.Ability
 app = express()
 app.use express.bodyParser()
 app.use (req, res, next) ->
-  req.user = new User(1)
+  if req.query.login is 'true'
+    req.user = new User(1)
   next()
+
 app.use Rampart.express(Ability)
 app.get '/:id', (req, res, next) ->
   article = new Article(req.params.id)
