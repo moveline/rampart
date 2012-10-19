@@ -58,6 +58,13 @@ describe 'Rampart', ->
       it 'should be true on `destroy`', ->
         Ability.isAllowed('destory', User).should.be.ok
 
+    describe 'all', ->
+      beforeEach ->
+        Ability.can 'read', 'all'
+
+      it 'should be true', ->
+        Ability.isAllowed('read', User).should.be.ok
+
   describe 'isNotAllowed', ->
     describe 'class level', ->
       beforeEach ->
